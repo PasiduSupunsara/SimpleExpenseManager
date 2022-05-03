@@ -17,12 +17,12 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Transaction;
 
-public class PersistentTransactionDAO extends SQLiteOpenHelper implements TransactionDAO{
+public class PerTransactionDAO extends SQLiteOpenHelper implements TransactionDAO{
 
 
 
-    public PersistentTransactionDAO(@Nullable Context context) {
-        super(context , "190697A.db", null, 1 );
+    public PerTransactionDAO(@Nullable Context context) {
+        super(context , "190612L.db", null, 1 );
     }
 
     @Override
