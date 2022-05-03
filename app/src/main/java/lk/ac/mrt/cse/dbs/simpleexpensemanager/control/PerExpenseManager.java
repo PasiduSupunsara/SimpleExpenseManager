@@ -9,10 +9,10 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistantAccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentTransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 
-public class PersistenceExpenseManager extends ExpenseManager{
+public class PerExpenseManager extends ExpenseManager{
 
     private final Context context;
-    public PersistenceExpenseManager(Context context) throws ExpenseManagerException {
+    public PerExpenseManager(Context context) throws ExpenseManagerException {
         //setup db
         this.context = context;
 
@@ -27,11 +27,11 @@ public class PersistenceExpenseManager extends ExpenseManager{
     @Override
     public void setup() throws ExpenseManagerException {
 
-        TransactionDAO persistentTransactionDAO = new PersistentTransactionDAO(this.context);
-        setTransactionsDAO(persistentTransactionDAO);
+        TransactionDAO perTransactionDAO = new PerTransactionDAO(this.context);
+        setTransactionsDAO(perTransactionDAO);
 
-        AccountDAO persistentAccountDAO = new PersistantAccountDAO(this.context);
-        setAccountsDAO(persistentAccountDAO);
+        AccountDAO perAccountDAO = new PerAccountDAO(this.context);
+        setAccountsDAO(perAccountDAO);
 
 
         // dummy data
