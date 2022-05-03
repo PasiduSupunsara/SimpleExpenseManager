@@ -16,12 +16,12 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.exception.InvalidAccountExcep
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 
-public class PersistantAccountDAO extends SQLiteOpenHelper implements AccountDAO{
+public class PerAccountDAO extends SQLiteOpenHelper implements AccountDAO{
 
 
 
-    public PersistantAccountDAO(@Nullable Context context) {
-        super(context , "190697A.db", null, 1 );
+    public PerAccountDAO(@Nullable Context context) {
+        super(context , "190612L.db", null, 1 );
     }
 
     @Override
